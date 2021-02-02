@@ -1,0 +1,13 @@
+C:\Users\eyuph\source\repos\GameSalesProject\bin\Debug\netcoreapp3.1\GameSalesProject.exe
+C:\Users\eyuph\source\repos\GameSalesProject\bin\Debug\netcoreapp3.1\GameSalesProject.deps.json
+C:\Users\eyuph\source\repos\GameSalesProject\bin\Debug\netcoreapp3.1\GameSalesProject.runtimeconfig.json
+C:\Users\eyuph\source\repos\GameSalesProject\bin\Debug\netcoreapp3.1\GameSalesProject.runtimeconfig.dev.json
+C:\Users\eyuph\source\repos\GameSalesProject\bin\Debug\netcoreapp3.1\GameSalesProject.dll
+C:\Users\eyuph\source\repos\GameSalesProject\bin\Debug\netcoreapp3.1\GameSalesProject.pdb
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.csprojAssemblyReference.cache
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.AssemblyInfoInputs.cache
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.AssemblyInfo.cs
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.csproj.CoreCompileInputs.cache
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.dll
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.pdb
+C:\Users\eyuph\source\repos\GameSalesProject\obj\Debug\netcoreapp3.1\GameSalesProject.genruntimeconfig.cache
