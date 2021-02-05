@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\Entities\\Entities.csproj"
+              "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -44,6 +44,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -65,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\Entities\\Entities.csproj": {
+    "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eyuph\\source\\repos\\ReCapProject\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\ReCapProject\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",

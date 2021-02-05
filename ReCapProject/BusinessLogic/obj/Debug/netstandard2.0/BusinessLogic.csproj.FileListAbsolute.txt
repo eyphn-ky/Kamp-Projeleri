@@ -12,3 +12,17 @@ C:\Users\eyuph\source\repos\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\
 C:\Users\eyuph\source\repos\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.csproj.CopyComplete
 C:\Users\eyuph\source\repos\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.dll
 C:\Users\eyuph\source\repos\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.pdb
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\BusinessLogic.deps.json
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\BusinessLogic.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\BusinessLogic.pdb
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\DataAccess.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.AssemblyInfo.cs
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.csproj.CopyComplete
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.pdb
