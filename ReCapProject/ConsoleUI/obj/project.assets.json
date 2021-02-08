@@ -1482,10 +1482,24 @@
           "bin/placeholder/BusinessLogic.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Core": "1.0.0",
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
         },
@@ -1499,6 +1513,9 @@
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -5687,6 +5704,11 @@
       "path": "../BusinessLogic/BusinessLogic.csproj",
       "msbuildProject": "../BusinessLogic/BusinessLogic.csproj"
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -5702,7 +5724,8 @@
     ".NETCoreApp,Version=v3.1": [
       "BusinessLogic >= 1.0.0",
       "DataAccess >= 1.0.0",
-      "Entities >= 1.0.0"
+      "Entities >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.11"
     ]
   },
   "packageFolders": {
@@ -5753,6 +5776,12 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[3.1.11, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

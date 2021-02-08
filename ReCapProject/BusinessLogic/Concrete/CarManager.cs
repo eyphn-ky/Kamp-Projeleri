@@ -7,6 +7,7 @@ using System.Text;
 using DataAccess.Abstract;
 using System.Linq.Expressions;
 using System.Linq;
+using Entities.DTOs;
 
 namespace BusinessLogic.Concrete
 {
@@ -68,6 +69,11 @@ namespace BusinessLogic.Concrete
         public List<Car> GetCarsByColorId(int Id)
         {
             return _carDal.GetAll().Where(p => p.ColorId == Id).ToList();
+        }
+
+        public List<RentCarDetailsDto> GetRentCarDetails()
+        {
+           return _carDal.GetRentCarDetails();
         }
     }
 }

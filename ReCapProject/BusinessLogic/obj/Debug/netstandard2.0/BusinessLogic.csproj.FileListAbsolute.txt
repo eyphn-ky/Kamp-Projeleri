@@ -26,3 +26,5 @@ C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\
 C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.csproj.CopyComplete
 C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.dll
 C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\obj\Debug\netstandard2.0\BusinessLogic.pdb
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\Core.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\BusinessLogic\bin\Debug\netstandard2.0\Core.pdb

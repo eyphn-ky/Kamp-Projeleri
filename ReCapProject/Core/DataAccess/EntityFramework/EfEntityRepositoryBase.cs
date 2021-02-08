@@ -1,5 +1,5 @@
-﻿using DataAccess.Abstract;
-using Entities.Abstract;
+﻿using Core.DataAccess;
+using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,11 +7,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Concrete
+namespace Core.DataAccess.EntityFramework
 {// REFERANS : STRİNG , CLASS 
     //DEGER: İNT , DECİMAL
     public class EfEntityRepositoryBase<TContext, TEntity> : IEntityRepository<TEntity>
-        where TEntity : class ,IEntity ,new()
+        where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {
         public void Add(TEntity entity)
@@ -21,8 +21,6 @@ namespace DataAccess.Concrete
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
-
-
             }
         }
 
@@ -33,8 +31,6 @@ namespace DataAccess.Concrete
                 var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;
                 context.SaveChanges();
-
-
             }
         }
 
@@ -47,7 +43,7 @@ namespace DataAccess.Concrete
             }
 
         }
-       
+
         public TEntity GetById(Expression<Func<TEntity, bool>> filter)
         {
             using (TContext context = new TContext())
@@ -55,7 +51,7 @@ namespace DataAccess.Concrete
                 return context.Set<TEntity>().SingleOrDefault(filter);
             }
         }
-       
+
         public void Update(TEntity entity)
         {
             using (TContext context = new TContext())
@@ -63,7 +59,6 @@ namespace DataAccess.Concrete
                 var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
                 context.SaveChanges();
-
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -9,6 +10,7 @@ namespace BusinessLogic.Abstract
    public  interface ICarService
     {
         Car GetById(Expression<Func<Car, bool>> filter);
+        List<RentCarDetailsDto> GetRentCarDetails();
         List<Car> GetAll();
         List<Car> GetCarsByBrandId(int Id);
         List<Car> GetCarsByColorId(int Id);

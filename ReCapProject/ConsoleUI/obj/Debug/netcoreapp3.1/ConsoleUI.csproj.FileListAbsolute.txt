@@ -78,3 +78,5 @@ C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\ConsoleUI\bin\Debug\netc
 C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\eyuph\source\repos\Kamp Projeleri\ReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.pdb
