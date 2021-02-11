@@ -8,6 +8,9 @@ using DataAccess.Abstract;
 using System.Linq.Expressions;
 using System.Linq;
 using Entities.DTOs;
+using Core.Utilities.Results;
+using BusinessLogic.Constants;
+using DataAccess.Concrete.EntityFramework;
 
 namespace BusinessLogic.Concrete
 {
@@ -21,59 +24,59 @@ namespace BusinessLogic.Concrete
         }
 
 
-        public void Add(Car car)
+        public IResult Add(Car car)
         {
-            if (car.DailyPrice > 0)
+            if (!(car.DailyPrice > 0))
             {
-                _carDal.Add(car);
-                Console.WriteLine("Kayıt başarılı!!");
+                return new ErrorResult(Messages.CarAdded);
             }
-            else
+            _carDal.Add(car);
+            return new SuccessResult("Kayıt başarılı!!");
+            
+        }
+
+        public IResult Delete(Car car)
+        {
+           _carDal.Delete(car);
+           return new Result(true,"Silme Başarılı");
+          
+        }
+
+        public IDataResult<List<Car>> GetAll()
+        {
+            if(DateTime.Now.Hour == 22)
             {
-                Console.WriteLine("Günlük ücret belirtilmedi!!");
+                return new ErrorDataResult<List<Car>>( Messages.MaintenanceTime);
             }
-
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.CarsListed);
         }
 
-        public void Delete(Car car)
+        public  IDataResult<Car>GetById(Expression<Func<Car, bool>> filter)
         {
-            _carDal.Delete(car);
+            return new SuccessDataResult<Car>(_carDal.GetById(filter));
         }
 
-        public List<Car> GetAll()
+        public IResult Update(Car car)
         {
-            return _carDal.GetAll();
-        }
-
-        public Car GetById(Expression<Func<Car, bool>> filter)
-        {
-            return _carDal.GetById(filter);
-        }
-
-        public void Update(Car car)
-        {
-            if (car.DailyPrice > 0)
+            if (!(car.DailyPrice > 0))
             {
-                _carDal.Update(car);
-                Console.WriteLine("Kayıt başarılı!!");
-            }
-            else
-            {
-                Console.WriteLine("Günlük ücret belirtilmedi!!");
-            }
+                return new Result(false, "Günlük ücret belirtilmedi!!");          
+            }        
+            return new Result(true ,"Araç Eklendi");
         }
-        public List<Car> GetCarsByBrandId(int Id)
+        public IDataResult<List<Car>> GetCarsByBrandId(int Id)
+
         {
-            return _carDal.GetAll().Where(p => p.BrandId == Id).ToList();
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll().Where(p => p.BrandId == Id).ToList());
         }
-        public List<Car> GetCarsByColorId(int Id)
+        public IDataResult<List<Car>> GetCarsByColorId(int Id)
         {
-            return _carDal.GetAll().Where(p => p.ColorId == Id).ToList();
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll().Where(p => p.ColorId == Id).ToList());
         }
 
-        public List<RentCarDetailsDto> GetRentCarDetails()
+        public IDataResult<List<RentCarDetailsDto>> GetRentCarDetails()
         {
-           return _carDal.GetRentCarDetails();
+           return new SuccessDataResult<List<RentCarDetailsDto>>(_carDal.GetRentCarDetails());
         }
     }
 }

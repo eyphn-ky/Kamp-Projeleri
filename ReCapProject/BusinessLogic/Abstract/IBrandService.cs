@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -8,10 +9,10 @@ namespace BusinessLogic.Abstract
 {
     public interface IBrandService
     {
-        Brand GetById(Expression<Func<Brand, bool>> filter);
-        List<Brand> GetAll();
-        void Add(Brand brand);
-        void Update(Brand brand);
-        void Delete(Brand brand);
+        IDataResult<Brand> GetById(Expression<Func<Brand, bool>> filter);
+        IDataResult<List<Brand>> GetAll();
+        IResult Add(Brand brand);
+        IResult Update(Brand brand);
+        IResult Delete(Brand brand);
     }
 }

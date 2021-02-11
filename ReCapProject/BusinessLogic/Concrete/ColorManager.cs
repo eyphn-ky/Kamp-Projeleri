@@ -1,11 +1,12 @@
 ﻿using BusinessLogic.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-
+using BusinessLogic.Constants;
 
 namespace BusinessLogic.Concrete
 {
@@ -17,33 +18,38 @@ namespace BusinessLogic.Concrete
             _colorDal = colorDal;
         }
 
-        public void Add(Color color)
+        public IResult Add(Color color)
         {
             //İŞ KURALLARI
+
             _colorDal.Add(color);
-
+            return new SuccessResult(Messages.ColorAdded);
         }
 
-        public void Delete(Color color)
+        public IResult Delete(Color color)
         {
             //İŞ KURALLARI
+
             _colorDal.Delete(color);
+            return new SuccessResult(Messages.ColorDeleted);
         }
 
-        public List<Color> GetAll()
+        public IDataResult<List<Color>> GetAll()
         {
-           return  _colorDal.GetAll();
+        
+            return new SuccessDataResult<List<Color>>(_colorDal.GetAll());
         }
 
-        public Color GetById(Expression<Func<Color, bool>> filter)
+        public IDataResult<Color> GetById(Expression<Func<Color, bool>> filter)
         {
-            return _colorDal.GetById(filter);
+            return new SuccessDataResult<Color>(_colorDal.GetById(filter));
         }
 
-        public void Update(Color color)
+        public IResult Update(Color color)
         {
             //İŞ KURALLARI
             _colorDal.Update(color);
+            return new SuccessResult(Messages.ColorUpdated);
         }
     }
 }

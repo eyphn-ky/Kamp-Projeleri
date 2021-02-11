@@ -1,4 +1,6 @@
 ﻿using BusinessLogic.Abstract;
+using BusinessLogic.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -17,46 +19,44 @@ namespace BusinessLogic.Concrete
         }
 
 
-        public void Add(Brand brand)
+        public IResult Add(Brand brand)
         {
-           
             if(brand.Name.Length>=2)
             {
                 _brandDal.Add(brand);
-                Console.WriteLine("Kayıt Başarılı!!");
+                return new SuccessResult(Messages.BrandAdded);
             }
-            else
-            {
-                Console.WriteLine("Araba ismi minimum 2 karakter olmalıdır!!");
-            }
+            return new ErrorResult(Messages.BrandNameInvalid);
         }
 
-        public void Delete(Brand brand)
+        public IResult Delete(Brand brand)
         {
             //İŞ KURALLARI
             _brandDal.Delete(brand);
+            return new SuccessResult(Messages.BrandDeleted);
         }
 
-        public List<Brand> GetAll()
+        public IDataResult<List<Brand>> GetAll()
         {
-            return _brandDal.GetAll();
+            _brandDal.GetAll();
+            return new SuccessDataResult<List<Brand>>(Messages.BrandListed);
         }
 
-        public Brand GetById(Expression<Func<Brand, bool>> filter)
+        public IDataResult<Brand> GetById(Expression<Func<Brand, bool>> filter)
         {
-            return _brandDal.GetById(filter);
+            _brandDal.GetById(filter);
+            return new SuccessDataResult<Brand>(Messages.BrandListed);
         }
 
-        public void Update(Brand brand)
+        public IResult Update(Brand brand)
         {
             if (brand.Name.Length >= 2)
             {
                 _brandDal.Update(brand);
+                return new SuccessResult(Messages.BrandUpdated);
             }
-            else
-            {
-                Console.WriteLine("Araba ismi minimum 2 karakter olmalıdır!!");
-            }
+            return new ErrorResult(Messages.BrandNameInvalid);
+          
 
         }
     }
