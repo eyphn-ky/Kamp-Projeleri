@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\GameSalesProject\\GameSalesProject.csproj",
+      "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\GameSalesProject\\GameSalesProject.csproj",
       "projectName": "GameSalesProject",
-      "projectPath": "C:\\Users\\eyuph\\source\\repos\\GameSalesProject\\GameSalesProject.csproj",
+      "projectPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\GameSalesProject\\GameSalesProject.csproj",
       "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eyuph\\source\\repos\\GameSalesProject\\obj\\",
+      "outputPath": "C:\\Users\\eyuph\\source\\repos\\Kamp Projeleri\\GameSalesProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

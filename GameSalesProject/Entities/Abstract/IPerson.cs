@@ -6,11 +6,11 @@ namespace GameSalesProject.Entities.Abstract
 {
     public interface IPerson
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public string Country { get; set; }
-        public string DateOfBirth { get; set; }
-        public string NationalIdentity { get; set; }
+        int Id { get; set; }
+        string Name { get; set; }
+        string LastName { get; set; }
+        string Country { get; set; }
+        string DateOfBirth { get; set; }
+        string NationalIdentity { get; set; }
     }
 }

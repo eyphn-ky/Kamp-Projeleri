@@ -12,6 +12,6 @@ namespace GameSalesProject.Entities.Concrete
         public string ReleaseDate { get; set; }
         public string Type { get; set; }
         public string Publisher { get; set; }
-        public Decimal UnitPrice { get; set; }
+        public decimal UnitPrice { get; set; }
     }
 }

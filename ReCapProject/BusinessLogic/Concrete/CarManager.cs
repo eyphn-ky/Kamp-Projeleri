@@ -44,15 +44,18 @@ namespace BusinessLogic.Concrete
 
         public IDataResult<List<Car>> GetAll()
         {
-            if(DateTime.Now.Hour == 22)
-            {
-                return new ErrorDataResult<List<Car>>( Messages.MaintenanceTime);
-            }
+            // if(DateTime.Now.Hour == 23)
+            //{
+            //    return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
+            //}
+                
+        
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.CarsListed);
         }
 
         public  IDataResult<Car>GetById(Expression<Func<Car, bool>> filter)
         {
+          
             return new SuccessDataResult<Car>(_carDal.GetById(filter));
         }
 
@@ -77,6 +80,11 @@ namespace BusinessLogic.Concrete
         public IDataResult<List<RentCarDetailsDto>> GetRentCarDetails()
         {
            return new SuccessDataResult<List<RentCarDetailsDto>>(_carDal.GetRentCarDetails());
+        }
+
+        public IResult GetById(int id)
+        {
+            return new SuccessDataResult<Car>(_carDal.GetById(p=>p.Id==id));
         }
     }
 }

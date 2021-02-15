@@ -6,8 +6,8 @@ namespace GameSalesProject.Entities.Abstract
 {
      public interface IEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+         int Id { get; set; }
+         string Name { get; set; }
         
      }
 }

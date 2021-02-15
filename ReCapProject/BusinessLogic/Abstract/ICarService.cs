@@ -14,9 +14,10 @@ namespace BusinessLogic.Abstract
         IDataResult<List<RentCarDetailsDto>> GetRentCarDetails();
         IDataResult<List<Car>> GetCarsByBrandId(int Id);
         IDataResult<List<Car>> GetCarsByColorId(int Id);
+        IDataResult<List<Car>> GetAll();
         IResult Add(Car car);
         IResult Update(Car car);
         IResult Delete(Car car);
-
+        IResult GetById(int id);
     }
 }

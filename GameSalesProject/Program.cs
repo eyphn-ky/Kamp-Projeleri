@@ -40,7 +40,7 @@ namespace GameSalesProject
             IValidateService validateService = new MernisValidateService();
             Campaign campaign = new Campaign
             {
-                Discount = 0.6m,
+                Discount = 0.75m,
                 Id = 1,
                 Name = "Summer Campaign"
             };
@@ -54,8 +54,7 @@ namespace GameSalesProject
                 Publisher = "Riot Games",
                 ReleaseDate = "02/06/2020",
                 Type = "First Person Shooter",
-                UnitPrice = 100m
-
+                UnitPrice = 200m
             };
             IGameDal gameDal = new GameDal();
             GameManager gameManager = new GameManager(gameDal);
