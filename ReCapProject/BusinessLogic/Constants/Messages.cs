@@ -21,5 +21,7 @@ namespace BusinessLogic.Constants
         public static string BrandUpdated = "Marka Güncellendi";
         public static string CanNotRent = "Araç bir başka müşteride";
         public static string SuccessRental = "Kiralama Başarılı";
+
+        public static string UpdateSuccesful = "Araç Başarılı bir şekilde teslim edildi";
     }
 }

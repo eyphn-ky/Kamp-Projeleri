@@ -3,11 +3,12 @@ using BusinessLogic.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-
+using System.Linq;
 namespace BusinessLogic.Concrete
 {
     public class RentalManager : IRentalService
@@ -19,10 +20,23 @@ namespace BusinessLogic.Concrete
         }
         public IResult Add(Rental rental)
         {
+            RentalDetailsDto rentalDetails = _rentalDal.GetRentalDetails(rental.CarId);
+            if (rentalDetails==null)
+            {
+                _rentalDal.Add(rental);
+                return new SuccessResult(Messages.SuccessRental);
+            }
+            else if(int.Parse(rentalDetails.ReturnDate.Year.ToString()) > 2000 && rentalDetails.Id>0)
+            {
+                _rentalDal.Add(rental); 
+                return new SuccessResult(Messages.SuccessRental);
+            }
+            else
+            {
+                return new ErrorResult(Messages.CanNotRent);
+            }
             
-            
-            _rentalDal.Add(rental);
-            return new SuccessResult();
+           
             
         }
 
@@ -34,20 +48,31 @@ namespace BusinessLogic.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            _rentalDal.GetAll();
-            return new SuccessDataResult<List<Rental>>();
+          
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
+        }
+
+        public IDataResult<RentalDetailsDto> GetAllRentalDetails(int Id)
+        {
+            return new SuccessDataResult<RentalDetailsDto>(_rentalDal.GetRentalDetails(Id));
         }
 
         public IDataResult<Rental> GetById(Expression<Func<Rental, bool>> filter)
         {
-            _rentalDal.GetById(filter);
-            return new SuccessDataResult<Rental>();
+           
+            return new SuccessDataResult<Rental> (_rentalDal.GetById(filter));
         }
 
         public IResult Update(Rental rental)
         {
+            RentalDetailsDto toUpdate=_rentalDal.GetRentalDetails(rental.CarId);
+            rental.CustomerId = toUpdate.CustomerId;
+            rental.RentDate = toUpdate.RentDate;
+            rental.ReturnDate = DateTime.Now;
+            rental.Id = toUpdate.Id;
             _rentalDal.Update(rental);
-            return new SuccessResult();
+            return new SuccessResult(Messages.UpdateSuccesful);
         }
+
     }
 }
