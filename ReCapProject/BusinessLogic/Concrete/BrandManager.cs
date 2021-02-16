@@ -38,14 +38,14 @@ namespace BusinessLogic.Concrete
 
         public IDataResult<List<Brand>> GetAll()
         {
-            _brandDal.GetAll();
-            return new SuccessDataResult<List<Brand>>(Messages.BrandListed);
+           
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(),Messages.BrandListed);
         }
 
         public IDataResult<Brand> GetById(Expression<Func<Brand, bool>> filter)
         {
-            _brandDal.GetById(filter);
-            return new SuccessDataResult<Brand>(Messages.BrandListed);
+           
+            return new SuccessDataResult<Brand>(_brandDal.GetById(filter),Messages.BrandListed);
         }
 
         public IResult Update(Brand brand)

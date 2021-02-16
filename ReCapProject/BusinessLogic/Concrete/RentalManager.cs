@@ -35,9 +35,17 @@ namespace BusinessLogic.Concrete
             {
                 return new ErrorResult(Messages.CanNotRent);
             }
-            
-           
-            
+        }
+
+        public IResult Update(Rental rental)
+        {
+            RentalDetailsDto toUpdate = _rentalDal.GetRentalDetails(rental.CarId);
+            rental.CustomerId = toUpdate.CustomerId;
+            rental.RentDate = toUpdate.RentDate;
+            rental.ReturnDate = DateTime.Now;
+            rental.Id = toUpdate.Id;
+            _rentalDal.Update(rental);
+            return new SuccessResult(Messages.UpdateSuccesful);
         }
 
         public IResult Delete(Rental rental)
@@ -63,16 +71,6 @@ namespace BusinessLogic.Concrete
             return new SuccessDataResult<Rental> (_rentalDal.GetById(filter));
         }
 
-        public IResult Update(Rental rental)
-        {
-            RentalDetailsDto toUpdate=_rentalDal.GetRentalDetails(rental.CarId);
-            rental.CustomerId = toUpdate.CustomerId;
-            rental.RentDate = toUpdate.RentDate;
-            rental.ReturnDate = DateTime.Now;
-            rental.Id = toUpdate.Id;
-            _rentalDal.Update(rental);
-            return new SuccessResult(Messages.UpdateSuccesful);
-        }
 
     }
 }

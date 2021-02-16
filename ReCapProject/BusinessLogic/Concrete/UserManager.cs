@@ -23,6 +23,11 @@ namespace BusinessLogic.Concrete
             return new SuccessResult();
 
         }
+        public IResult Update(User User)
+        {
+            _userDal.Update(User);
+            return new SuccessResult();
+        }
 
         public IResult Delete(User User)
         {
@@ -32,20 +37,16 @@ namespace BusinessLogic.Concrete
 
         public IDataResult<List<User>> GetAll()
         {
-            _userDal.GetAll();
-            return new SuccessDataResult<List<User>>();
+            
+            return new SuccessDataResult<List<User>>(_userDal.GetAll());
         }
 
         public IDataResult<User> GetById(Expression<Func<User, bool>> filter)
         {
-            _userDal.GetById(filter);
-            return new SuccessDataResult<User>();
+            
+            return new SuccessDataResult<User>(_userDal.GetById(filter));
         }
 
-        public IResult Update(User User)
-        {
-            _userDal.Update(User);
-            return new SuccessResult();
-        }
+     
     }
 }
