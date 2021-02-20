@@ -31,7 +31,6 @@ namespace BusinessLogic.Concrete
 
         public IResult Delete(Brand brand)
         {
-            //İŞ KURALLARI
             _brandDal.Delete(brand);
             return new SuccessResult(Messages.BrandDeleted);
         }

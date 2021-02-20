@@ -11,6 +11,10 @@ using Entities.DTOs;
 using Core.Utilities.Results;
 using BusinessLogic.Constants;
 using DataAccess.Concrete.EntityFramework;
+using FluentValidation;
+using BusinessLogic.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 
 namespace BusinessLogic.Concrete
 {
@@ -23,13 +27,9 @@ namespace BusinessLogic.Concrete
             _carDal = carDal;
         }
 
-
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            if (!(car.DailyPrice > 0))
-            {
-                return new ErrorResult(Messages.CarAdded);
-            }
             _carDal.Add(car);
             return new SuccessResult("Kayıt başarılı!!");
             
