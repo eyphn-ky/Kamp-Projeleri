@@ -25,7 +25,6 @@ namespace DataAccess.Concrete.EntityFramework
                              on r.CustomerId equals cu.Id
                              join u in context.Users
                              on cu.Id equals u.Id
-
                              where r.CarId == Id
                              orderby r.Id ascending
 

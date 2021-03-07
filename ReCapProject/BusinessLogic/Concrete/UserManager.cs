@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Abstract;
+using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -23,30 +24,15 @@ namespace BusinessLogic.Concrete
             return new SuccessResult();
 
         }
-        public IResult Update(User User)
+
+        public IDataResult<User> GetByMail(string mail)
         {
-            _userDal.Update(User);
-            return new SuccessResult();
+            return new SuccessDataResult<User>(_userDal.GetById(p => p.Email == mail));
         }
 
-        public IResult Delete(User User)
+        public IDataResult<List<OperationClaim>> GetClaims(User user)
         {
-            _userDal.Delete(User);
-            return new SuccessResult();
+            return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
-
-        public IDataResult<List<User>> GetAll()
-        {
-            
-            return new SuccessDataResult<List<User>>(_userDal.GetAll());
-        }
-
-        public IDataResult<User> GetById(Expression<Func<User, bool>> filter)
-        {
-            
-            return new SuccessDataResult<User>(_userDal.GetById(filter));
-        }
-
-     
     }
 }

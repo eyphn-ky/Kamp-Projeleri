@@ -2,6 +2,7 @@
 using BusinessLogic.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,6 +23,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getall")]
+        [Authorize(Roles ="Car.List")]//[Authorize()] => kişinin kayıtlı olması yeterli , tokenı olsun yeter
         public IActionResult GetAll()
         {
           

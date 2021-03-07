@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Entities.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,7 +22,12 @@ namespace BusinessLogic.Constants
         public static string BrandUpdated = "Marka Güncellendi";
         public static string CanNotRent = "Araç bir başka müşteride";
         public static string SuccessRental = "Kiralama Başarılı";
-
         public static string UpdateSuccesful = "Araç Başarılı bir şekilde teslim edildi";
+        public static string UserNotFound = "Kullanıcı bulunamadı";
+        public static string PasswordError = "Şifre hatalı";
+        public static string SuccesfulLogin = "Giriş başarılı";
+        public static string UserExists = "Bu email kullanılıyor";
+        public static string SuccesfulRegister = "Kayıt Başarılı";
+        public static string AccessTokenCreated = "Token oluşturuldu";
     }
 }
